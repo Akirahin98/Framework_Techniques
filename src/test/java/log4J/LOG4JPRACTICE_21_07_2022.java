@@ -28,6 +28,15 @@ public class LOG4JPRACTICE_21_07_2022 {
 		log.info("Clicked on Translate button");
 	}
 	
+	@Test
+	public void OdiatoHindi() {
+		System.setProperty("webdriver.chrome.driver", "./Drivers1/chromedriver.exe");
+		driver=new ChromeDriver();
+		driver.get("https://www.easyhindityping.com/odia-to-hindi-translation");
+		driver.findElement(By.id("translationTextarea")).sendKeys("ତୁ କିଏ ବେ ");
+		driver.findElement(By.id("SubmitTranslation")).click();
+		driver.close();
+	}
 	@BeforeMethod
 	public void beforemethod() {
 		log=Logger.getLogger("Log4jpractice");
